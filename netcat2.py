@@ -60,7 +60,7 @@ def client_sender(buffer):
 				if recv_len < 4096:
 					break
 
-				print(response)
+				print(response),
 
 				# wait for more input
 				buffer = raw_input("")
@@ -78,6 +78,7 @@ def client_sender(buffer):
 
 def server_loop():
 	global target
+	global port
 
 	# if no target is defined, we listen on all interfaces
 	if not len(target):
@@ -152,9 +153,9 @@ def client_handler(client_socket):
 			# show a simple prompt
 			client_socket.send("<Netcatv2:#> ")
 				
-				# now receive until enter pressed
+			# now receive until enter pressed
 			cmd_buffer = ""
-			while '\n' not in cmd_buffer:
+			while "\n" not in cmd_buffer:
 				cmd_buffer += client_socket.recv(1024)
 
 			# send back command output
