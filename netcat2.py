@@ -20,15 +20,15 @@ port			= 0
 
 def usage():
 	print("Netcatv2 Tool")
-	print()
+	print('')
 	print('Usage: netcat2.py -t target_host -p port')
 	print('-l --listen		- listen on [host]:[port] for incoming connections')
 	print('-e --execute=file_to_run	- execute the given file upon receiving a connection')
 	print('-c --command		- initialize a command shell')
 	print('-u --upload=destination	- upon receiving a connection upload a file and write to [destination]')
 	
-	print()
-	print()
+	print('')
+	print('')
 	print('Examples: ')
 	print('netcat2.py -t 192.168.0.1 -p 5555 -l -c')
 	print('netcat2.py -t 192.168.0.1 -p 5555 -l -u=c:\\target.exe')
